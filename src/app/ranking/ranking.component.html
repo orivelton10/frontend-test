@@ -1,0 +1,21 @@
+
+<ul class="celebrity">
+  <li class="celebrity__item" *ngFor="let celebrity of dataRankings ; let i = index" >
+    <div class="celebrity__box">
+        <img [src]="celebrity.picture" [alt]="celebrity.name" class="celebrity__img">
+        <span class="celebrity__number">{{i + 1}}</span>        
+    </div>
+    <div class="celebrity__description">
+      <p class="celebrity__name">{{celebrity.name}}</p>
+      <p class="celebrity__detail">{{celebrity.description}}</p>
+    </div>
+    <div class="celebrity__result">
+      <div>
+        <p class="celebrity__like">Gostam</p>
+        <p class="celebrity__dont-like">Não Gostam</p>
+        <span>{{celebrity.positive }}</span>
+        <span>{{celebrity.negative}}</span>
+      </div>
+    </div>
+  </li>
+</ul>

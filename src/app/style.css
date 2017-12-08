@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,700i,800,900');
+
+* {padding: 0; margin: 0}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+}
+
+.ranking {
+    width: 100%;
+    max-width: 340px;
+    margin: 50px auto;
+    position: relative;
+    padding-top: 120px;
+}
+
+.ranking__img {
+    position: absolute;
+    left: -35px;
+    top: 0;
+}
+
+.ranking__box-title {
+    width: 100%;
+    overflow: hidden;
+    padding: 9px 40px 9px 0;
+}
+
+.ranking__title {
+    max-width: 250px;
+    float: right;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #ffffff;
+    width: 100%;
+    text-align: right;
+    padding: 9px 22px;
+}

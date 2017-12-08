@@ -1,0 +1,123 @@
+.celebrity {
+    background: #FFFFFF;
+    border-radius: 5px;
+    &__box {        
+        width: 66px;
+        height: 66px;
+        float: left;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 58%;
+        height: 100%;
+        border: 4px solid #ba3638;
+    }
+
+    &__item {
+        list-style: none;
+        width: 92%;
+        min-height: 82px;
+        padding: 3% 4% 1% 4%;
+        transition: 0.5s;
+        &:nth-child(even) {
+            background: #f2f1f1;
+        }
+
+        &:hover {
+            background: #ba3638;
+            transition: 0.5s;
+            .celebrity__name {
+                color: #FFFFFF;
+            }
+
+            .celebrity__detail {
+                color: #000000;
+            }
+
+            .celebrity__img {
+                border-color: #FFFFFF;
+            }
+        }
+    }
+
+    &__description {
+        float: left;
+        display: block;
+        overflow: hidden;
+        padding: 23px 0 0 30px;
+        width: 65%;
+    }
+
+    &__result {
+        width: 100%;
+        max-width: 155px;
+        background: #FFFFFF;
+        right: -170px;
+        position: absolute;
+        border-radius: 5px;
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 0; 
+            height: 0;          
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent; 
+            border-right: 5px solid #FFFFFF;
+            position: absolute;
+            left: -5px;
+            top: 24px;
+        }
+    }
+
+    &__like, &__dont-like {
+        background: #ba3638;
+        font-size: 10px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        float: left;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    &__like {
+        width: 39%;
+        border-right: 1px solid #6a1e1f;
+    }
+
+    &__dont-like {
+        width: 59%;
+        border-left: 1px solid #c57071;
+    }
+
+    &__name {
+        color: #ba3638;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__detail {
+        color: #909090;
+        font-size: 12px;
+    }
+
+    &__number {
+        display: block;
+        background: #ffffff;
+        position: absolute;
+        bottom: -10px;
+        right: -6px;
+        font-size: 14px;
+        color: #707070;
+        border: 1px solid #707070;
+        border-radius: 50%;
+        font-weight: 600;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
+}
+
