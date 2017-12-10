@@ -7,32 +7,30 @@ import { ServiceRanking } from '../ranking.service';
   styleUrls: ['./ranking.component.scss']
 })
 export class RankingComponent implements OnInit {
-  public dataRankings: object;
-  constructor(private myService: ServiceRanking) { }
+  public dataRankings: any;
+  public reactCelebrity:Array<any> = [
+    { like : "Gostam", dontLike: "Não gostam" }
+  ]
+
+  constructor(private myService: ServiceRanking) {}
 
   ngOnInit() {
     this.dataRankings = this.myService.getRanking()
       .subscribe(dataQuestion => {
-          this.dataRankings = dataQuestion.data;
-          console.log(this.dataRankings);
-      });
-  }
+        this.dataRankings = dataQuestion.data.sort(orderCelebrity);
+        function orderCelebrity(a,b) {
+          if (a.positive > b.positive)
+             return -1;
+          if (a.positive < b.positive)
+            return 1;
+          return 0;
+        }
 
-}
-
-import { Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({
-  name: 'sortBy'
-})
-export class SortByPipe implements PipeTransform {
-  transform(arr: Array<any>, prop: any, reverse: boolean = false): any {
-    if (arr === undefined) return
-    const m = reverse ? -1 : 1
-    return arr.sort((a: any, b: any): number => {
-      const x = a[prop]
-      const y = b[prop]
-      return (x === y) ? 0 : (x < y) ? -1*m : 1*m
-    })
+        for (let i in this.dataRankings) {
+          this.dataRankings[i].positive = parseFloat(this.dataRankings[i].positive);
+          this.dataRankings[i].negative = parseFloat(this.dataRankings[i].negative);
+        }
+        console.table(this.dataRankings);
+      });      
   }
 }

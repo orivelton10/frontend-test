@@ -24,7 +24,7 @@
         &:nth-child(even) {
             background: #f2f1f1;
         }
-
+        
         &:hover {
             background: #ba3638;
             transition: 0.5s;
@@ -38,6 +38,10 @@
 
             .celebrity__img {
                 border-color: #FFFFFF;
+            }
+
+            .celebrity__result {
+                display: block;
             }
         }
     }
@@ -57,6 +61,7 @@
         right: -170px;
         position: absolute;
         border-radius: 5px;
+        display: none;
         &::before {
             content: "";
             display: inline-block;
@@ -86,11 +91,13 @@
     &__like {
         width: 39%;
         border-right: 1px solid #6a1e1f;
+        border-radius: 5px 0 0 0;
     }
 
     &__dont-like {
         width: 59%;
         border-left: 1px solid #c57071;
+        border-radius: 0 5px 0 0;
     }
 
     &__name {

@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class ServiceRanking {
-    public dataRanking: object;
+    public dataRanking: Array<any>;
 
     public url: string = 'https://raw.githubusercontent.com/orivelton10/frontend-test/master/public/fazenda.json';
     constructor(private _http: Http) {
