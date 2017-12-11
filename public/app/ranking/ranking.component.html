@@ -17,9 +17,10 @@
       <div>
         <p class="celebrity__like">{{ reactCelebrity[0].like }}</p>
         <p class="celebrity__dont-like">{{ reactCelebrity[0].dontLike }}</p>
-        <span>
-          {{ celebrity.positive }}</span>
-        <span>
+        <span class="celebrity__like celebrity__like--bottom">
+          {{ celebrity.positive }}
+        </span>
+        <span class="celebrity__dont-like celebrity__dont-like--bottom">
           {{ celebrity.negative }}
         </span>
       </div>

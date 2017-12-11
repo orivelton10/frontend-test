@@ -93,18 +93,36 @@
         float: left;
         text-align: center;
         padding: 5px 0;
+        &--bottom {
+          background: #FFFFFF;
+          color: #909090;
+          font-size: 24px;
+          font-weight: bold;
+          min-height: 30px;
+        }
     }
 
     &__like {
         width: 39%;
         border-right: 1px solid #6a1e1f;
         border-radius: 5px 0 0 0;
+        &--bottom {
+          border-right: 1px solid #8c8b8b;
+          border-radius: 0 0 5px 5px;
+          display: block;
+        }
     }
 
     &__dont-like {
         width: 59%;
         border-left: 1px solid #c57071;
         border-radius: 0 5px 0 0;
+        &--bottom {
+          border-left: 1px solid #FFFFFF;
+
+          border-radius: 0 0 5px 5px;
+          display: block;
+        }
     }
 
     &__name {
