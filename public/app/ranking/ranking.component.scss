@@ -1,5 +1,7 @@
+@import "../../stylesheets/variable";
+
 .celebrity {
-    background: #FFFFFF;
+    background: $white;
     border-radius: 5px;
     &__box {
         width: 66px;
@@ -12,7 +14,7 @@
         width: 100%;
         border-radius: 58%;
         height: 100%;
-        border: 4px solid #ba3638;
+        border: 4px solid $mahogany;
     }
 
     &__item {
@@ -23,7 +25,7 @@
         transition: 0.5s;
         cursor: pointer;
         &:nth-child(even) {
-            background: #f2f1f1;
+            background: $white-smoke;
         }
         &:nth-child(1) {
           border-radius: 5px 5px 0 0;
@@ -34,18 +36,18 @@
         }
 
         &:hover {
-            background: #ba3638;
+            background: $mahogany;
             transition: 0.5s;
             .celebrity__name {
-                color: #FFFFFF;
+                color: $white;
             }
 
             .celebrity__detail {
-                color: #000000;
+                color: $black;
             }
 
             .celebrity__img {
-                border-color: #FFFFFF;
+                border-color: $white;
             }
 
             .celebrity__result {
@@ -58,16 +60,16 @@
               }
 
               .celebrity__like, .celebrity__dont-like {
-                background: #FFFFFF;
-                color: #909090;
+                background: $white;
+                color: $suva-grey;
               }
 
               .celebrity__like {
-                border-right: 1px solid #8c8b8b;
+                border-right: 1px solid $suva-grey8b;
               }
 
               .celebrity__dont-like {
-                border-left: 1px solid #ffffff;
+                border-left: 1px solid $white;
               }
             }
         }
@@ -84,7 +86,7 @@
     &__result {
         width: 100%;
         max-width: 155px;
-        background: #FFFFFF;
+        background: $white;
         position: absolute;
 
         @media(min-width: 768px) {
@@ -100,7 +102,7 @@
               height: 0;
               border-top: 5px solid transparent;
               border-bottom: 5px solid transparent;
-              border-right: 5px solid #FFFFFF;
+              border-right: 5px solid $white;
               position: absolute;
               left: -5px;
               top: 24px;
@@ -111,22 +113,19 @@
               right: 74px;
               display: none;
         }
-
-
-
     }
 
     &__like, &__dont-like {
-        background: #ba3638;
+        background: $mahogany;
         font-size: 10px;
-        color: #FFFFFF;
+        color: $white;
         text-transform: uppercase;
         float: left;
         text-align: center;
         padding: 5px 0;
         &--bottom {
-          background: #FFFFFF;
-          color: #909090;
+          background: $white;
+          color: $suva-grey;
           font-size: 24px;
           font-weight: bold;
           min-height: 30px;
@@ -135,10 +134,10 @@
 
     &__like {
         width: 39%;
-        border-right: 1px solid #6a1e1f;
+        border-right: 1px solid $red-berry;
         border-radius: 5px 0 0 0;
         &--bottom {
-          border-right: 1px solid #8c8b8b;
+          border-right: 1px solid $suva-grey8b;
           border-radius: 0 0 5px 5px;
           display: block;
         }
@@ -146,10 +145,10 @@
 
     &__dont-like {
         width: 59.5%;
-        border-left: 1px solid #c57071;
+        border-left: 1px solid $froly;
         border-radius: 0 5px 0 0;
         &--bottom {
-          border-left: 1px solid #FFFFFF;
+          border-left: 1px solid $white;
 
           border-radius: 0 0 5px 5px;
           display: block;
@@ -157,25 +156,25 @@
     }
 
     &__name {
-        color: #ba3638;
+        color: $mahogany;
         font-size: 18px;
         font-weight: 500;
     }
 
     &__detail {
-        color: #909090;
+        color: $suva-grey;
         font-size: 12px;
     }
 
     &__number {
         display: block;
-        background: #ffffff;
+        background: $white;
         position: absolute;
         bottom: -10px;
         right: -6px;
         font-size: 14px;
-        color: #707070;
-        border: 1px solid #707070;
+        color: $dim-gray;
+        border: 1px solid $dim-gray;
         border-radius: 50%;
         font-weight: 600;
         width: 20px;
