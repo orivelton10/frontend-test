@@ -10,11 +10,14 @@ JavaScript, Código responsivo, suporte a crossbrowser e lógica.
 Primeiramente, faça um fork e clone do projeto;
 Crie uma branch (pode ser com seu nome mesmo) e depois instale as dependências:
 
+    npm install -g @angular/cli
     npm install
 
 Após isso, rode a aplicação:
 
-    npm start
+    ng serve -o
+
+Acesse localhost:4200
 
 Depois do seu setup você precisará seguir as seguintes instruções, para construir a aplicação:
 
