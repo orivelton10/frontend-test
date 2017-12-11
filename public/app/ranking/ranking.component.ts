@@ -19,17 +19,17 @@ export class RankingComponent implements OnInit {
       .subscribe(dataQuestion => {
         this.dataRankings = dataQuestion.data.sort(orderCelebrity);
         for(let i in this.dataRankings) {
-          let positive = Number(this.dataRankings[i].positive);
-          let negative = Number(this.dataRankings[i].negative);
+          let positive:number = Number(this.dataRankings[i].positive);
+          let negative:number = Number(this.dataRankings[i].negative);
 
           if (positive > 0 &&  positive > 0) {
-            let resultPositive = parseFloat(positive)/parseFloat(positive  + negative);
-            let totalPositive = parseFloat(resultPositive * 100);
-            this.dataRankings[i].positive = totalPositive.toFixed(0) + '%';
+          let resultPositive: number = Number(positive) / Number(positive  + negative);
+          let totalPositive: number = Number(resultPositive * 100);
+          this.dataRankings[i].positive = totalPositive.toFixed(0) + '%';
 
-            let resultNegative = parseFloat(negative)/parseFloat(negative + positive);
-            let totalNegative = parseFloat(resultNegative * 100);
-            this.dataRankings[i].negative = totalNegative.toFixed(0) + '%';
+          let resultNegative: number = Number(negative) / Number(negative + positive);
+          let totalNegative: number = Number(resultNegative * 100);
+          this.dataRankings[i].negative = totalNegative.toFixed(0) + '%';
           }
         }
       });

@@ -19,8 +19,9 @@
         list-style: none;
         width: 92%;
         min-height: 82px;
-        padding: 3% 4% 1% 4%;
+        padding: 3% 4% 1% 4.1%;
         transition: 0.5s;
+        cursor: pointer;
         &:nth-child(even) {
             background: #f2f1f1;
         }
@@ -50,6 +51,25 @@
             .celebrity__result {
                 display: block;
             }
+
+            @media(max-width: 768px) {
+              .celebrity__description {
+                display: none;
+              }
+
+              .celebrity__like, .celebrity__dont-like {
+                background: #FFFFFF;
+                color: #909090;
+              }
+
+              .celebrity__like {
+                border-right: 1px solid #8c8b8b;
+              }
+
+              .celebrity__dont-like {
+                border-left: 1px solid #ffffff;
+              }
+            }
         }
     }
 
@@ -65,24 +85,35 @@
         width: 100%;
         max-width: 155px;
         background: #FFFFFF;
-        right: -170px;
         position: absolute;
-        border-radius: 5px;
-        display: none;
-        &::before {
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-            width: 0;
-            height: 0;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-right: 5px solid #FFFFFF;
-            position: absolute;
-            left: -5px;
-            top: 24px;
+
+        @media(min-width: 768px) {
+          right: -170px;
+          border-radius: 5px;
+          display: none;
+          &::before {
+              content: "";
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 10px;
+              width: 0;
+              height: 0;
+              border-top: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              border-right: 5px solid #FFFFFF;
+              position: absolute;
+              left: -5px;
+              top: 24px;
+          }
         }
+
+        @media(max-width: 768px) {
+              right: 74px;
+              display: none;
+        }
+
+
+
     }
 
     &__like, &__dont-like {
@@ -114,7 +145,7 @@
     }
 
     &__dont-like {
-        width: 59%;
+        width: 59.5%;
         border-left: 1px solid #c57071;
         border-radius: 0 5px 0 0;
         &--bottom {
