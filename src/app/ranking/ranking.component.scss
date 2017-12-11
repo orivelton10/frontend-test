@@ -1,7 +1,7 @@
 .celebrity {
     background: #FFFFFF;
     border-radius: 5px;
-    &__box {        
+    &__box {
         width: 66px;
         height: 66px;
         float: left;
@@ -24,7 +24,14 @@
         &:nth-child(even) {
             background: #f2f1f1;
         }
-        
+        &:nth-child(1) {
+          border-radius: 5px 5px 0 0;
+        }
+
+        &:nth-child(5) {
+          border-radius: 0 0 5px 5px;
+        }
+
         &:hover {
             background: #ba3638;
             transition: 0.5s;
@@ -67,10 +74,10 @@
             display: inline-block;
             vertical-align: middle;
             margin-right: 10px;
-            width: 0; 
-            height: 0;          
+            width: 0;
+            height: 0;
             border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent; 
+            border-bottom: 5px solid transparent;
             border-right: 5px solid #FFFFFF;
             position: absolute;
             left: -5px;
@@ -127,4 +134,3 @@
         text-align: center;
     }
 }
-

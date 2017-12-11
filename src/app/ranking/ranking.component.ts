@@ -24,13 +24,8 @@ export class RankingComponent implements OnInit {
           if (a.positive < b.positive)
             return 1;
           return 0;
-        }
-
-        for (let i in this.dataRankings) {
-          this.dataRankings[i].positive = parseFloat(this.dataRankings[i].positive);
-          this.dataRankings[i].negative = parseFloat(this.dataRankings[i].negative);
-        }
+        }        
         console.table(this.dataRankings);
-      });      
+      });
   }
 }

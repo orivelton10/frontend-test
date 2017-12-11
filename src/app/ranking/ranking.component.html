@@ -4,17 +4,12 @@
     <figure>
       <div class="celebrity__box">
             <img [src]="celebrity.picture" [alt]="celebrity.name" class="celebrity__img">
-          <span class="celebrity__number">{{ i + 1 }}</span>        
+          <span class="celebrity__number">{{ i + 1 }}</span>
       </div>
       <div class="celebrity__description">
         <figcaption>
           <p class="celebrity__name">{{ celebrity.name }}</p>
           <p class="celebrity__detail">{{ celebrity.description }}</p>
-          <span>
-              {{ celebrity.positive }}</span>
-            <span>
-              {{ celebrity.negative }}
-            </span>
         </figcaption>
       </div>
     </figure>

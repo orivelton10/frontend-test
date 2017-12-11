@@ -12,7 +12,7 @@ export class ServiceRanking {
     constructor(private _http: Http) {
         this.getRanking();
     }
-    
+
     public getRanking() {
         return this._http.get(this.url)
         .map((res: Response) => res.json());
